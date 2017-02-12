@@ -1,0 +1,80 @@
+@media only screen and (min-width:991px) {
+	.about-us-item:nth-child(1) {
+		margin-top: 50px;
+	}
+
+}
+
+@media only screen and (max-width:991px) {
+	.services-img {
+		margin-top: 20px;
+	}
+
+	.text-left,
+	.text-right {
+		text-align: center;
+	}
+
+	.about-us-item div:nth-child(1) {
+		margin-top: 30px;
+	}
+
+	.about-us-item div:nth-child(2) {
+		margin-top: 10px;
+	}
+
+	.about-us-item .about-us-img:after {
+		display: none;
+	}
+
+	.about-us-item {
+		margin-top: 30px;
+	}
+
+}
+
+@media only screen and (max-width:768px) {
+
+	/* For mobile phones: */
+	#header .logo {
+		text-align: center;
+	}
+
+	.top-menu {
+		display: inline-block;
+		text-align: center;
+	}
+
+	.nav-menu>li:nth-child(1) {
+		margin-left: 0px;
+	}
+
+	.copyright span {
+		display: inline;
+	}
+
+}
+
+@media only screen and (max-width:640px) {
+
+	/* For mobile phones: */
+	#header .logo {
+		text-align: left;
+	}
+
+	#header .logo-img {
+		display: inline-block;
+		text-align: left;
+	}
+
+	.top-menu {
+		display: none;
+	}
+
+	.icon-min-menu {
+		display: inline-block;
+		float: right;
+		cursor: pointer;
+	}
+
+}
