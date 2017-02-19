@@ -1,0 +1,172 @@
+//forms buttons dialogs etc.
+
+//menu
+
+.horizontal-nav {
+	&:extend(.ul-unstyled);
+
+	li {
+		display: inline-block;
+		margin-left: 15px;
+
+		a {
+			.transition();
+			padding: 10px 17px;
+			display: block;
+			border: 2px solid transparent;
+			color: #fff;
+			font-weight: 600;
+			text-decoration: none;
+			text-transform: uppercase;
+			line-height: 1;
+
+			&.active {
+				border-color: @accent;
+				color: @accent;
+			}
+
+			&:hover {
+				color: @accent;
+				text-decoration: none;
+			}
+
+		}
+
+	}
+
+	&.black-font a {
+		color: @font;
+	}
+
+}
+
+//responsive menu
+.logo{
+	float: left;
+}
+.main-nav-trigger{
+	display: none;
+	font-size: 45px;
+	color: #fff;
+	line-height: 1;
+	float: right;
+	cursor: pointer;
+	font-family: Arial Unicode MS, Lucida Sans Unicode, sans-serif;
+	.transition();
+	&:hover{
+		color: @accent;
+	}
+}
+@media (max-width:992px) {
+	.main-nav-trigger{
+	display: block;
+}
+	.site-nav {
+		position: relative;
+	}
+
+	.site-nav .horizontal-nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: @overlay;
+		width: 100%;
+		li{
+			display: block;
+			margin-left: 0;
+			width: 100%;
+			text-align: center;
+			border-bottom: solid 1px lighten(@overlay, 10%);
+		}
+		a{
+				display: inline-block;
+				padding: 20px 30px;
+
+				&.active{
+border-color: transparent;
+				}
+			}
+	}
+
+}
+
+// end responsive menu 992px
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.btn-ghost(@color:#353f46, @color-hover:#fff) {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 15px 40px;
+	font-weight: 600;
+	color: @color;
+	border: 2px solid @color;
+	.transition();
+
+	&:hover {
+		text-decoration: none;
+		color: @color-hover;
+		border-color: @color-hover;
+	}
+
+}
+
+.btn-ghost-grey {
+	.btn-ghost();
+}
+
+//form 
+.form-group {
+	margin-bottom: 35px;
+
+	label {
+		text-transform: uppercase;
+		font-family: "SegoeUIBold";
+	}
+
+}
+
+.form-control {
+	background: transparent;
+	border: solid 2px #fff;
+	height: 60px;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+textarea.form-control {
+	height: 215px;
+	margin-bottom: 5px;
+}
+
+.btn-submit {
+	width: 100%;
+	background: @accent;
+	border: none;
+	text-transform: uppercase;
+	line-height: 1;
+	padding: 25px 0;
+	font-family: "SegoeUIBold";
+	border: solid 2px @accent;
+	.transition();
+
+	&:hover {
+		background: transparent;
+		color: @accent;
+	}
+
+}

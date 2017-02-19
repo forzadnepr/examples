@@ -1,0 +1,320 @@
+.site-header {
+	.bg-img('hero-img.jpg');
+	-ms-behavior: url(/assets/ie8-support/backgroundsize.min.htc);
+
+	img {
+		margin-top: (38px - 23px) / 2;
+	}
+
+}
+
+.site-nav {
+	background-color: @overlay;
+	background-color: fade(@overlay, 85%);
+	padding: 60px 0;
+}
+
+.horizontal-nav {
+	float: right;
+}
+
+.hero-heading {
+	margin: 250px 0;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #fff;
+	font-size: 3em;
+	text-align: center;
+
+	span {
+		background: @overlay;
+		opacity: 0.8;
+		background: fade(@overlay, 85%);
+		padding: 0 20px;
+	}
+
+}
+
+.stn-services {
+	&:extend(.stn-padding);
+	background: @accent;
+	color: #fff;
+	font-weight: 500;
+
+	h3 {
+		text-transform: uppercase;
+		font-size: 1.714em;
+		line-height: 1;
+		margin-top: 20px;
+		margin-bottom: 15px;
+	}
+
+	[class^="col-"] {
+		@media(max-width:1200px) {
+			margin-bottom: 50px;
+		}
+
+	}
+
+}
+
+.stn-heading {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 2.143em;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1;
+
+	&:after {
+		content: '';
+		width: 45px;
+		height: 2px;
+		background-color: #fff;
+		margin-top: 10px;
+		margin-bottom: 40px;
+	}
+
+	&.black-line:after {
+		background: @font;
+	}
+
+}
+
+.stn-portfolio {
+	&:extend(.stn-padding);
+
+	.stn-heading {
+		margin-bottom: 80px;
+		margin-left: -15px;
+	}
+
+}
+
+.thumbs-row {
+	min-height: 270px + 270px + 30px;
+
+	/*[class^="col-"] {
+		margin-bottom: 30px;
+	}*/
+	.thumb {
+		position: relative;
+		width: 100%;
+		background: #979797;
+		margin: 0 30px 30px 0;
+		opacity: .8;
+		overflow: hidden;
+
+		img {
+			background-size: cover;
+			width: 100%;
+			height: 270px;
+		}
+
+		a {
+			display: block;
+			background: #979797;
+			position: relative;
+			opacity: .8;
+			color: #fff;
+			font-size: 72px;
+			text-align: center;
+			font-weight: 200;
+			text-decoration: none;
+
+			&:after {
+				position: absolute;
+				content: '+';
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #454e56;
+				background-color: fade(#454e56, 80%);
+				line-height: 1;
+				opacity: 0;
+				.transition();
+			}
+
+			&:hover:after {
+				opacity: 1;
+				line-height: 270 / 72;
+			}
+
+		}
+
+	}
+
+}
+
+//stn-video
+.stn-video {
+	&:extend(.stn-padding);
+	background: #515f67;
+	color: #fff;
+
+	.stn-heading {
+		padding-left: 0;
+	}
+
+	.btn-ghost-grey {
+		@media(max-width:991px) {
+			margin-bottom: 50px;
+		}
+
+	}
+
+}
+
+//stn-twitter
+.stn-twitter {
+	&:extend(.stn-padding);
+	background: @accent;
+	color: #fff;
+
+	p {
+		font-size: 2em;
+		font-family: "SegoeUILight";
+	}
+
+	strong {
+		font-weight: 500;
+		font-family: "SegoeUIBold";
+	}
+
+}
+
+.stn-icon-twitter {
+	float: right;
+	font-size: 24px;
+}
+
+.stn-about {
+	&:extend(.stn-padding);
+	.bg-img('photographer.jpg');
+	color: #fff;
+}
+
+.social-links {
+	&:extend(.ul-unstyled);
+
+	li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	a {
+		display: table;
+		color: #fff;
+		width: 65px;
+		height: 65px;
+		font-size: 30px;
+		text-align: center;
+		border: solid 2px #fff;
+		.transition();
+
+		&:hover {
+			border-color: @accent;
+			color: @accent;
+			text-decoration: none;
+		}
+
+		i {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+	}
+
+}
+
+//stn-testim
+.stn-testimonials {
+	&:extend(.stn-padding);
+
+	.icon-quote {
+		float: right;
+		color: #515f67;
+		font-size: 28px;
+	}
+
+}
+
+.tst-quote {
+	margin: 0;
+	font-size: 2em;
+
+	cite {
+		display: block;
+		color: @accent;
+		font-weight: 600;
+		font-size: 0.5em;
+		margin-top: 30px;
+	}
+
+}
+
+//footer
+.site-footer {
+	&:extend(.stn-padding);
+	background: #353f47;
+	color: #515f67;
+	font-size: 0.87em;
+	font-family: "SegoeUISemiBold";
+}
+
+.footer-nav {
+	&:extend(.ul-unstyled);
+	float: left;
+	text-transform: uppercase;
+
+	li {
+		display: inline-block;
+
+		&:before {
+			content: '|';
+		}
+
+		&:first-child {
+			&:before {
+				content: ' ';
+			}
+
+			a {
+				padding-left: 0;
+			}
+
+		}
+
+		a {
+			padding: 0 10px;
+			color: inherit;
+			display: inline-block;
+		}
+
+	}
+
+}
+
+//end footer;
+
+.copyright {
+	float: right;
+}
+
+//contact stn-contact
+.stn-contact {
+	&:extend(.stn-padding);
+	.bg-img('hot-coffee.jpg');
+	color: #fff;
+
+	.form-text {
+		margin-top: 15px;
+
+		@media (max-width:991px) {
+			margin-bottom: 0;
+		}
+
+	}
+
+}
